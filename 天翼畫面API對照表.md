@@ -11,8 +11,6 @@ app_user_attendance/add_gps_track **會一直去呼叫**
 
 system_config/get_version **一直去呼叫**
 
-app_user_attendance/add_gps_track `android` **會一直去呼叫**
-
 ---
 #  登入畫面
 ![登入][1]
