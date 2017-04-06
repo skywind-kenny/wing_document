@@ -7,11 +7,11 @@
 
 
 
-app_user_attendance/add_gps_track **(會一直去呼叫)**
-system_config/get_version **(會一直去呼叫)**
+app_user_attendance/add_gps_track **會一直去呼叫**
+system_config/get_version **一直去呼叫**
 
 `android`
-app_user_attendance/add_gps_track **(會一直去呼叫)**
+app_user_attendance/add_gps_track **會一直去呼叫**
 
 ---
 #  登入畫面
@@ -22,7 +22,7 @@ system_config/get_version `android`
 ##  登入
 
 app_user/login
-app_user/get_groups **(怪 android會call兩次)**
+app_user/get_groups **怪 android會call兩次**
 app_user/get_targets_by_enterprise `ios`
 app_user/get_alert_by_number  `ios`
 app_user_notify/get_count_by_user
@@ -33,7 +33,7 @@ app_group/get_managers_by_user
 app_group/get_group_item
 app_group/get_users_by_enterprise_group `android`
 app_group/get_allgroups_by_enterprise `android`
-app_group/get_groups_by_enterprise (管理者) `ios`
+app_group/get_groups_by_enterprise  `ios`
 
 schedule/get_targets_by_enterprise `ios`
 schedule/get_alert_by_number
@@ -58,7 +58,7 @@ app_user/update_secret
 ##  新用戶註冊
 
 app_user/cellphone_signup 
-system_config/get_config `android` **(call了兩次分別帶tos跟privacy兩個參數)**
+system_config/get_config `android` **call了兩次分別帶tos跟privacy兩個參數**
 
 ---
 
@@ -89,12 +89,12 @@ schedule/get_item_by_id
 
 `android`
 schedule_mission/update_report
-schedule/upload_image (如果有照片)
+schedule/upload_image 如果有照片
 
 ###  群組任務_篩選
 
 `android`
-app_group/get_users_by_main_group (會call多次)
+app_group/get_users_by_main_group 會call多次
 app_group/get_users_by_enterprise_group
 app_group/get_managers_by_group_id
 
@@ -112,12 +112,12 @@ schedule/get_by_days
 ###  點擊拜訪進入拜訪詳細資訊
 
 schedule/get_item_by_id
-schedule/get_feedback_by_feedback_id (有回饋資料時)
-schedule/set_status_done `ios` (按下開始或結束拜訪) 
-schedule/get_target_by_enterprise `ios` (按下開始拜訪)
+schedule/get_feedback_by_feedback_id 有回饋資料時
+schedule/set_status_done `ios` 按下開始或結束拜訪
+schedule/get_target_by_enterprise `ios` 按下開始拜訪
 
-contacter/get_company_by_id `android` (需確認是否選的公司不同)
-contacter/get_company_near_by_gps `android` (需確認是否選的公司不同)
+contacter/get_company_by_id `android` 需確認是否選的公司不同
+contacter/get_company_near_by_gps `android` 需確認是否選的公司不同
 
 ###  結束拜訪
 
@@ -137,8 +137,8 @@ schedule/get_feedback_by_feedback_id
 schedule/update_feedback
 schedule/set_status_done
 schedule/upload_feedback_image
-schedule/get_item_by_id (重新刷新頁面)
-schedule/get_feedback_by_feedback_id (重新刷新頁面)
+schedule/get_item_by_id 重新刷新頁面
+schedule/get_feedback_by_feedback_id 重新刷新頁面
 
 ###  記錄且下次拜訪
 
@@ -156,10 +156,10 @@ schedule/set_record_id `ios`
 **指派人員未完**
 
 `ios`
-app_group/get_users_by_enterprise_group (會call多次)
+app_group/get_users_by_enterprise_group 會call多次
 app_group/get_groups_by_enterprise
-app_group/get_managers_by_group_id (會call多次)
-app_group/get_users (會call多次)
+app_group/get_managers_by_group_id 會call多次
+app_group/get_users 會call多次
 
 app_user_attendance/get_attendance_flow_by_manager
 
@@ -179,10 +179,10 @@ schedule/get_targets_by_enterprise `android`
 ###  新增拜訪_選擇成員
 
 app_group/get_users_by_enterprise_group
-app_group/get_users_by_main_group `android` (會call多次api)
+app_group/get_users_by_main_group `android` 會call多次api
 
-schedule/get_groups_by_enterprise `ios
-schedule/get_users `ios`
+schedule/get_groups_by_enterprise `ios`
+schedule/get_users `ios` 
 schedule/get_managers_by_group_id
 
 **ios此地方call了13次api**
@@ -194,8 +194,8 @@ contacter/get_company_and_user_list
 ####  新增拜訪_選擇聯絡人 企業客戶
 ####  選擇公司
 
-contacter/get_company_and_user_list (客戶列表)
-contacter/get_person_by_company_id (android點擊後才call)
+contacter/get_company_and_user_list 客戶列表
+contacter/get_person_by_company_id android點擊後才call
 ####  選擇文件
 
 document/get_list_by_enterprise
@@ -207,7 +207,7 @@ schedule/upload_file_enterprise
 ###  新增拜訪完送出
 schedule/update_item
 schedule/set_record_id
-schedule/get_by_days (重新刷新拜訪頁) **ios會call好幾次api**
+schedule/get_by_days 重新刷新拜訪頁 **ios會call好幾次api**
 
 ---
 
@@ -215,7 +215,7 @@ schedule/get_by_days (重新刷新拜訪頁) **ios會call好幾次api**
 
 ###  日報列表
 
-app_user_daily/get_list (會call多次api)
+app_user_daily/get_list 會call多次api
 
 ###  新增/編輯日報
 
@@ -246,7 +246,7 @@ app_group/get_package_by_enterprise
 ###  新增成員_確認
 
 app_user/get_users_by_cellphone_batch
-send_invite_sms (送出簡訊認證)
+send_invite_sms 
 
 ###  編輯成員
 
@@ -275,7 +275,7 @@ get_managers_by_group_id
 app_user_notify/get_list_by_user
 
 ###  點擊消息_拜訪
-app_user_notify/get_item_by_id (怪 ios任務會call兩次)
+app_user_notify/get_item_by_id   怪 ios任務會call兩次
 app_user_notify/set_status_hide
 
 以下詳細拜訪資訊
@@ -304,7 +304,7 @@ app_user_notify/set_status_hide
 
 ###  日曆列表
 
-schedule/get_by_days (ios會call多次)
+schedule/get_by_days ios會call多次
 
 ###  詳細內容
 同拜訪或任務
@@ -350,7 +350,7 @@ contacter/get_schedules_by_company_id
 ###  編輯聯絡人
 
 contacter/update_company
-contacter/delete_person (ios沒刪除聯絡人也會call)
+contacter/delete_person ios沒刪除聯絡人也會call
 contacter/update_person
 contacter/get_company_by_name_batch `android`
 
@@ -381,7 +381,7 @@ app_user_attendance/add_attendance `android`
 app_user_attendance/get_log_by_month_with_user
 
 ###  我的記錄
-app_user_attendance/get_log_by_month_with_user (ios會call三次)
+app_user_attendance/get_log_by_month_with_user ios會call三次
 
 ###  考勤詳細記錄
 
@@ -390,7 +390,7 @@ get_attendance_by_day `android`
 ###  群組考勤
 app_user_attendance/get_attendance_flow_by_manager
 
-app_group/get_users_by_main_group `android`(call多次api) 
+app_group/get_users_by_main_group `android`  call多次api
 app_group/get_users_by_enterprise_group `android`
 app_group/get_managers_by_group_id `android`
 
