@@ -15,7 +15,7 @@ app_user_attendance/add_gps_track **(會一直去呼叫)**
 
 ---
 #  登入畫面
-
+![登入][1]
 system_config/get_version `android`
 
 ##  登入
@@ -457,6 +457,7 @@ contacter/update_person
 contacter/update_person
 `android`
 contacter/update_person
+
 ---
 
 #  考勤
@@ -551,3 +552,6 @@ system_config/get_faq
 
 `android`
 system_config/get_config
+
+
+  [1]: https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5-01.png
